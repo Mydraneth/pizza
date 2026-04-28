@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Barlow", sans-serif;
+}
+#header {
+  height: 150px;
+}
+header {
+  background-color: #ce2829;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.5rem;
+  border-bottom: #c20608;
+  box-shadow: 0px 0px 150px -30px rgba(0, 0, 0, 0.09);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 532px;
+  margin: 16px auto 20vh auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div#form-container h2 {
+  display: flex;
+  font-weight: 600;
+  font-style: "SemiBold";
+  font-size: 22px;
+  color: #292929;
+  height: 56px;
+  align-items: center;
+  margin-top: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#price-review-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* padding: 16px 8px; */
+}
+#price-review-container h1 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 28px;
+  color: #292929;
+  flex: 3;
+}
+#review-stars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  color: #5f5f5f;
+  flex: 1;
+}
+#description {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 28.8px;
+  letter-spacing: 0%;
+  /* color: #5f5f5f;
+  padding: 0px 8px; */
 }
 
-.card {
-  padding: 2em;
+#size-thickness {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 428px;
+  margin: 16px 0px;
 }
 
-.read-the-docs {
-  color: #888;
+legend {
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 20px;
+  line-height: 24.78px;
+  letter-spacing: 0%;
+  margin-bottom: 16px;
+}
+
+#ingredient-checkboxes {
+  margin: 32px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#additional-ingredients p {
+  margin-bottom: 16px;
 }
