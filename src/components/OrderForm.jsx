@@ -124,12 +124,29 @@ export default function OrderForm() {
             placeholder="Siparişine eklemek istediğin bir not var mı?"
           />
         </div>
+        <hr />
         <div id="order-container">
-          <div id="order-quantity"></div>
-          <button id="minus-qty">-</button>
-          <div id="quantity">1</div>
-
-          <div id="order-now"></div>
+          <div id="order-quantity">
+            <button id="minus-qty">-</button>
+            <p id="quantity">1</p>
+            <button id="add-qty">+</button>
+          </div>
+          <div id="order-now">
+            <div id="order-total">
+              <legend>Sipariş Toplamı</legend>
+              <div id="subtotals">
+                <div id="choices-subtotals">
+                  <p>Seçimler</p>
+                  <p>25.50₺</p>
+                </div>
+                <div id="total">
+                  <p>Toplam</p>
+                  <p>110.50₺</p>
+                </div>
+              </div>
+            </div>
+            <button id="order-button">SİPARİŞ VER</button>
+          </div>
         </div>
       </Form>
     </div>
