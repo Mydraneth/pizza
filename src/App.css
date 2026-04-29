@@ -148,6 +148,7 @@ button#add-qty {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+
   padding: 40px 24px 24px;
 }
 #order-total legend {

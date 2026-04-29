@@ -125,6 +125,8 @@ export default function OrderForm() {
           />
         </div>
         <hr />
+
+        {/* 2 tane qty butonu olacak biri mobilde hidden diğeri desktopta */}
         <div id="order-container">
           <div id="order-quantity">
             <button id="minus-qty">-</button>
