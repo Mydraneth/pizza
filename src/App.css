@@ -3,10 +3,19 @@
 * {
   font-family: "Barlow", sans-serif;
 }
+/* Home Page */
+
 #header {
   height: 150px;
 }
-header {
+.home {
+  background-image: url(images/iteration-1-images/home-banner.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+}
+.header-internal {
   background-color: #ce2829;
   display: flex;
   justify-content: center;
@@ -15,7 +24,44 @@ header {
   border-bottom: #c20608;
   box-shadow: 0px 0px 150px -30px rgba(0, 0, 0, 0.09);
 }
+.header-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.5rem;
+}
 
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15vh 30vw;
+}
+.home-content h1 {
+  display: flex;
+  text-align: center;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 86px;
+  color: #ffffff;
+}
+#order-link {
+  background-color: #fdc913;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: SemiBold;
+  color: #292929;
+  border: none;
+  border-radius: 50px;
+  padding: 19px 60px;
+}
 #order-crumbs {
   background-color: #ce2829;
   display: flex;
@@ -133,6 +179,9 @@ hr {
 }
 
 @media (max-width: 768px) {
+  .home {
+    background-position: center top;
+  }
   #ingredient-checkboxes {
     margin: 32px 0px;
     display: grid;
