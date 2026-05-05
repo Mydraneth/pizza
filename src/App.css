@@ -16,6 +16,28 @@ header {
   box-shadow: 0px 0px 150px -30px rgba(0, 0, 0, 0.09);
 }
 
+#order-crumbs {
+  background-color: #ce2829;
+  display: flex;
+  justify-content: center;
+}
+#crumbs-container {
+  display: flex;
+  flex-direction: row;
+  width: 532px;
+}
+#order-crumbs a {
+  color: #faf7f2;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+}
+#order-crumbs p {
+  color: #faf7f2;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+}
 #form-container {
   display: flex;
   flex-direction: column;
@@ -79,6 +101,10 @@ div#form-container h2 {
 }
 
 legend {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  flex-shrink: 0;
   font-weight: 600;
   font-style: SemiBold;
   font-size: 20px;
@@ -86,7 +112,13 @@ legend {
   letter-spacing: 0%;
   margin-bottom: 16px;
 }
-
+legend .required {
+  color: #d80027;
+  margin-left: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: SemiBold;
+}
 #ingredient-checkboxes {
   margin: 32px 0px;
   display: grid;
@@ -95,98 +127,201 @@ legend {
 #additional-ingredients p {
   margin-bottom: 16px;
 }
-#order-container {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-#order-quantity {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  height: 57px;
-  width: 170px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #d9d9d9;
-  border-radius: 6px;
-}
-#order-quantity button {
-  flex: 1;
-  background-color: #fdc913;
-  height: 100%;
-  font-weight: 600;
-}
-button#minus-qty {
-  border-radius: 5px 0px 0px 5px;
-}
-button#add-qty {
-  border-radius: 0px 5px 5px 0px;
-}
-#order-quantity p {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin: 0px;
-  font-weight: 600;
-}
-#order-now {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #d9d9d9;
-  border-radius: 6px;
-  height: 255px;
-  overflow: hidden;
-}
 
-#order-total {
-  flex: 7;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-
-  padding: 40px 24px 24px;
-}
-#order-total legend {
-  width: 100%;
-  text-align: left;
-  margin-bottom: 24px;
-}
-
-#subtotals {
-  display: flex;
-  flex-direction: column;
-}
-#subtotals div {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-#order-button {
-  flex: 3;
-  width: 100%;
-  background-color: #fdc913;
-  font-weight: 600;
-  border-radius: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#choices-subtotals p {
-  color: #5f5f5f;
-  font-weight: 600;
-  font-style: SemiBold;
-}
-
-#total p {
-  color: #ce2829;
-  font-weight: 600;
-  font-style: SemiBold;
-}
 hr {
   margin: 32px 0px;
+}
+
+@media (max-width: 768px) {
+  #ingredient-checkboxes {
+    margin: 32px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #order-container-desktop {
+    display: none;
+  }
+  #order-total {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    padding: 40px 60px 24px;
+  }
+  #order-total legend {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  #subtotals {
+    display: flex;
+    flex-direction: column;
+  }
+  #subtotals div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #choices-subtotals p {
+    color: #5f5f5f;
+    font-weight: 600;
+    font-style: SemiBold;
+  }
+
+  #total p {
+    color: #ce2829;
+    font-weight: 600;
+    font-style: SemiBold;
+  }
+  #qty-order-btns {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  #order-quantity {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 57px;
+    width: 170px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+  }
+  #order-quantity button {
+    flex: 1;
+    background-color: #fdc913;
+    height: 100%;
+    font-weight: 600;
+  }
+  button#minus-qty {
+    border-radius: 5px 0px 0px 5px;
+  }
+  button#add-qty {
+    border-radius: 0px 5px 5px 0px;
+  }
+  #order-quantity p {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0px;
+    font-weight: 600;
+  }
+  #order-button {
+    flex: 1;
+    width: 100%;
+    background-color: #fdc913;
+    font-weight: 600;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 769px) {
+  #order-container-mobile {
+    display: none;
+  }
+  #order-container-desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  #order-quantity {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 57px;
+    width: 170px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+  }
+  #order-quantity button {
+    flex: 1;
+    background-color: #fdc913;
+    height: 100%;
+    font-weight: 600;
+  }
+  button#minus-qty {
+    border-radius: 5px 0px 0px 5px;
+  }
+  button#add-qty {
+    border-radius: 0px 5px 5px 0px;
+  }
+  #order-quantity p {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0px;
+    font-weight: 600;
+  }
+  #order-now {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    height: 255px;
+    overflow: hidden;
+  }
+
+  #order-total {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 40px 24px 24px;
+  }
+  #order-total legend {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  #subtotals {
+    display: flex;
+    flex-direction: column;
+  }
+  #subtotals div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #order-button {
+    flex: 3;
+    width: 100%;
+    background-color: #fdc913;
+    font-weight: 600;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #choices-subtotals p {
+    color: #5f5f5f;
+    font-weight: 600;
+    font-style: SemiBold;
+  }
+
+  #total p {
+    color: #ce2829;
+    font-weight: 600;
+    font-style: SemiBold;
+  }
 }
