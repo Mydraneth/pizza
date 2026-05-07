@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import OrderForm from "./components/OrderForm";
+import Success from "./components/Success";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/order" element={<OrderForm />} />
+        <Route path="/success" element={<Success />} />
       </Routes>
     </BrowserRouter>
   );

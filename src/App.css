@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --header-height: 150px;
+}
 * {
   font-family: "Barlow", sans-serif;
 }
 /* Home Page */
 
 #header {
-  height: 150px;
+  height: var(--header-height);
 }
 .home {
   background-image: url(images/iteration-1-images/home-banner.png);
@@ -79,6 +82,7 @@
   font-size: 16px;
 }
 #order-crumbs p {
+  padding: 0px 8px;
   color: #faf7f2;
   font-weight: 700;
   font-style: Bold;
@@ -178,9 +182,41 @@ hr {
   margin: 32px 0px;
 }
 
+.success-container {
+  min-height: 100vh;
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: var(--header-height);
+  background-color: #ce2829;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.success-container h1 {
+  display: flex;
+  text-align: center;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 86px;
+  color: #ffffff;
+  max-width: 768px;
+  padding: 0px 0px 10% 0px;
+}
+
+#customer-name {
+  margin-bottom: 32px;
+}
+
 @media (max-width: 768px) {
+  #header img {
+    min-width: 360px;
+  }
   .home {
     background-position: center top;
+  }
+  .home-content h1 {
+    font-size: 48px;
   }
   #ingredient-checkboxes {
     margin: 32px 0px;

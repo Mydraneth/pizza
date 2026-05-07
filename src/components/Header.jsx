@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/iteration-1-images/logo.svg";
 
 export default function Header() {
@@ -7,7 +7,9 @@ export default function Header() {
     location.pathname === "/" ? "header-home" : "header-internal";
   return (
     <header id="header" className={headerClass}>
-      <img src={logo} alt="Pizza logo" />
+      <Link to="/">
+        <img src={logo} alt="Pizza logo" />
+      </Link>
     </header>
   );
 }
