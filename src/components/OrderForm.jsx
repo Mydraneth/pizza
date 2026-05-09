@@ -260,10 +260,11 @@ export default function OrderForm() {
             <legend>
               Ekstra Malzemeler{" "}
               {errors.additionalIngredients && (
-                <legend className="required">*</legend>
+                <legend className="required" data-cy="requiredIgredients">
+                  *
+                </legend>
               )}
             </legend>
-            <p>En az 4,En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
             <div id="ingredient-checkboxes">
               {additionalIngredients.map((ingredient) => {
                 return (
@@ -289,7 +290,11 @@ export default function OrderForm() {
           <div id="customer-name">
             <legend>
               Ad Soyad{" "}
-              {errors.customerName && <legend className="required">*</legend>}
+              {errors.customerName && (
+                <legend className="required" data-cy="requiredName">
+                  *
+                </legend>
+              )}
             </legend>
             <Input
               id="customerName"
