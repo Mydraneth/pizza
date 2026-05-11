@@ -100,17 +100,7 @@ describe("Test ordering", () => {
   it("fills out the form and orders", () => {
     cy.fillOrder();
     cy.get("#order-button").click();
-    cy.url().should("include", "/order");
+    cy.url().should("include", "/success");
     cy.get("h1").should("have.text", `TEBRİKLER! SİPARİŞİNİZ ALINDI!`);
   });
 });
-// it("calculates the price correctly with base options", () => {
-//   cy.fillOrder(); // This does all the clicking for you instantly
-//   cy.get(".price-display").should("contain", "150 TL");
-// });
-
-// it("submits the order successfully", () => {
-//   cy.fillOrder();
-//   cy.get("#order-button").click();
-//   cy.get("h2").should("contain", "Sipariş Alındı!");
-// });
