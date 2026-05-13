@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cedarville+Cursive&display=swap");
 
 :root {
   --header-height: 150px;
@@ -12,6 +13,11 @@
   height: var(--header-height);
 }
 .home {
+  background-color: #f1eee8;
+  display: flex;
+  flex-direction: column;
+}
+.home-content {
   background-image: url(images/iteration-1-images/home-banner.png);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -208,6 +214,175 @@ hr {
   margin-bottom: 32px;
 }
 
+#firsat {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  font-style: SemiBold;
+  font-weight: 500;
+  color: #fdc913;
+}
+#home-kitchens {
+  width: 70vw;
+  margin: auto;
+}
+#mutfaklar {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  background-color: #ffffff;
+  width: 100vw;
+  margin: 0;
+}
+.mutfak {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 20px;
+}
+.mutfak h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+#cta {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: 500px;
+  grid-template-areas:
+    "big top-right"
+    "big bottom-right";
+}
+
+#lezzetus {
+  background-image: url("images/iteration-2-images/cta/kart-1.png");
+  background-size: cover;
+  grid-area: big;
+}
+
+#hackathlon {
+  background-image: url("images/iteration-2-images/cta/kart-2.png");
+  background-size: cover;
+  grid-area: top-right;
+}
+
+#npm {
+  background-image: url("images/iteration-2-images/cta/kart-3.png");
+  background-size: cover;
+  grid-area: bottom-right;
+}
+
+.cta-card {
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2%;
+  font-style: SemiBold;
+  font-weight: 500;
+}
+.cta-card h1 {
+  width: 50%;
+}
+.cta-card h2 {
+  width: 50%;
+}
+
+.cta-btn {
+  color: red;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 10px 15px;
+}
+#npm {
+  color: #292929;
+}
+#npm span {
+  color: red;
+}
+#most-packaged {
+  font-family: "Cedarville Cursive", cursive;
+  font-style: SemiBold;
+  font-weight: 500;
+  color: red;
+  text-align: center;
+  margin: 50px 0px 16px 0px;
+}
+#filling-flavors {
+  text-align: center;
+  font-weight: 600;
+  font-style: Bold;
+  font-size: 42px;
+  color: #292929;
+  margin-bottom: 32px;
+}
+#flavors {
+  display: flex;
+  flex-direction: row;
+  height: 7vh;
+  gap: 20px;
+}
+.flavor {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 50px;
+  padding: 0px 0px;
+}
+.flavor h3 {
+  margin: 0;
+  font-size: 18px;
+  padding: 0px 10px;
+}
+.selected {
+  background-color: #292929;
+}
+.selected h3 {
+  color: #ffffff;
+}
+
+#menu-item-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.menu-item img {
+  flex: 1;
+  object-fit: cover;
+}
+.menu-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-item-ratings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 @media (max-width: 768px) {
   #header img {
     min-width: 360px;
@@ -217,6 +392,12 @@ hr {
   }
   .home-content h1 {
     font-size: 48px;
+  }
+  .mutfak {
+    flex-direction: column;
+  }
+  .flavor {
+    flex-direction: column;
   }
   #ingredient-checkboxes {
     margin: 32px 0px;
@@ -313,7 +494,6 @@ hr {
     align-items: center;
   }
 }
-
 @media (min-width: 769px) {
   #order-container-mobile {
     display: none;
