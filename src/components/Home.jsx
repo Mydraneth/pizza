@@ -66,7 +66,8 @@ export default function Home() {
         <div id="flavors">
           {flavors.map((flavor, index) => {
             return (
-              <button
+              <a
+                href="#menu-item-list"
                 className={
                   "flavor " +
                   (selectedFlavors.includes(flavor.name) ? "selected" : "")
@@ -84,7 +85,7 @@ export default function Home() {
               >
                 <img src={flavor.image} alt={flavor.name} />
                 <h3>{flavor.name}</h3>
-              </button>
+              </a>
             );
           })}
         </div>

@@ -8,7 +8,9 @@
   font-family: "Barlow", sans-serif;
 }
 /* Home Page */
-
+html {
+  scroll-behavior: smooth;
+}
 #header {
   height: var(--header-height);
 }
@@ -22,7 +24,6 @@
   background-position: bottom;
   background-repeat: no-repeat;
   min-height: 100vh;
-  width: 100vw;
 }
 .header-internal {
   background-color: #ce2829;
@@ -232,7 +233,6 @@ hr {
   flex-direction: row;
   height: 10vh;
   background-color: #ffffff;
-  width: 100vw;
   margin: 0;
 }
 .mutfak {
@@ -362,12 +362,13 @@ hr {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: flex-start;
+  scroll-margin-top: 40px;
+  margin-bottom: 128px;
 }
 
 .menu-item {
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 .menu-item img {
   flex: 1;
@@ -382,6 +383,99 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+#footer-container {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #292929;
+}
+
+#footer {
+  width: 70%;
+}
+#footer-main {
+  display: flex;
+  flex-direction: row;
+}
+#teknolojik-yemekler {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#teknolojik-yemekler h1 {
+  margin-top: 16px;
+  display: flex;
+  align-items: flex-end; /* bottom */
+  justify-content: flex-start; /* left */
+  height: 30%;
+}
+#teknolojik-yemekler div {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.tek-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+#siccacik-menuler {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+#siccacik-menuler h3 {
+  margin-top: 16px;
+
+  display: flex;
+  align-items: flex-end; /* bottom */
+  justify-content: flex-start; /* left */
+  height: 30%;
+}
+
+#instagram {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 16px;
+}
+#instagram h3 {
+  margin-top: 16px;
+
+  display: flex;
+  align-items: flex-end; /* bottom */
+  justify-content: flex-start; /* left */
+
+  height: 30%;
+}
+#instagram-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#footer ul {
+  list-style-type: none;
+}
+#footer-bottom {
+  margin-bottom: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#footer-bottom img {
+  width: 30px;
+}
+#footer-bottom p {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 @media (max-width: 768px) {
   #header img {

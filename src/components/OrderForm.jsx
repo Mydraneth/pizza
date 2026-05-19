@@ -78,6 +78,7 @@ export default function OrderForm() {
   const [formData, setFormData] = useState(initialForm);
   const [errors, setErrors] = useState(initialErrors);
   const [isValid, setIsValid] = useState(false);
+  const [submitted, setSubmitted] = useState();
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -122,13 +123,21 @@ export default function OrderForm() {
       finalTotal,
     };
 
-    const response = await axios.post("https://reqres.in/api/pizza", payload, {
-      headers: {
-        "x-api-key": import.meta.env.VITE_REQRES_KEY,
-      },
-    });
-    console.log(response.data);
-    navigate("/success");
+    try {
+      const response = await axios.post(
+        "https://reqres.in/api/pizza",
+        payload,
+        {
+          headers: {
+            "x-api-key": import.meta.env.VITE_REQRES_KEY,
+          },
+        }
+      );
+      console.log(response.data);
+      navigate("/success", { state: { orderData: response.data } });
+    } catch (error) {
+      console.error("Sipariş gönderilirken bir hata oluştu:", error);
+    }
   };
   function handleAddQty() {
     setFormData((prev) => ({ ...prev, qty: prev.qty + 1 }));
